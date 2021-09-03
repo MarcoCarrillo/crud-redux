@@ -6,7 +6,7 @@ const EditarProducto = () => {
             <div className="col-md-8">
                 <div className="card">
                     <div className="card-body">
-                        <h2 className="text-center mb-4 ">Agregar Nuevo Producto</h2>
+                        <h2 className="text-center mb-4 ">Editar Producto</h2>
                         <form>
                             <div className="form-group">
                                 <label>Editar el Producto</label>
