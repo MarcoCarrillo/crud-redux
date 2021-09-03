@@ -19,6 +19,16 @@
       "nombre": "Perro",
       "precio": 1500,
       "id": 5
+    },
+    {
+      "nombre": "Queso",
+      "precio": 50,
+      "id": 6
+    },
+    {
+      "nombre": "Sandia",
+      "precio": 15,
+      "id": 7
     }
   ]
 }
