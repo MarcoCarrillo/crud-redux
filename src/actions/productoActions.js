@@ -79,6 +79,13 @@ export function obtenerProductosAction () {
             dispatch( descargarProductosExitosa(respuesta.data) );
         } catch (error) {
             dispatch( descargarProductosError() );
+
+            //Alerta
+            Swal.fire({
+                icon: 'error',
+                title: 'Ups!',
+                text: 'Hubo un error en el servidor, intenta de nuevo mas tarde:/'
+            })
         }
     }
 }
