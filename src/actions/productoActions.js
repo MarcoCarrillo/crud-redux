@@ -152,18 +152,35 @@ const obtenerProductoEditarAction = producto =>({
 //Edita un registro en la API y el state
 export function editarProductoAction(producto) {
     return async dispatch =>{
-        dispatch( editarProducto(producto) );
+        dispatch( editarProducto() );
 
         try {
-            const resultado = await clienteAxios.put(`/productos/${producto.id}`, producto);
-            console.log(resultado);
+            await clienteAxios.put(`/productos/${producto.id}`, producto);
+            dispatch( editarProductoExito(producto) );
+
+            //Alerta
+            Swal.fire(
+                'Correcto',
+                'El producto se editó correctamente',
+                'success'
+            )
         } catch (error) {
             console.log(error);
+            dispatch(editarProductoError());
         }
     }
 }
 
-const editarProducto = (producto) => ({
-    type: COMENZAR_EDICION_PRODUCTO,
-    payload: producto
+const editarProducto = () => ({
+    type: COMENZAR_EDICION_PRODUCTO
 })
+
+const editarProductoExito = producto => ({
+    type: PRODUCTO_EDITADO_EXITO,
+    payload: producto
+});
+
+const editarProductoError = () => ({
+    type: PRODUCTO_EDITADO_ERROR
+})
+
