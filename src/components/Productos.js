@@ -39,8 +39,8 @@ const Productos = () => {
                     {productos.length === 0 ? 'No hay productos' : (
                         productos.map(producto => (
                             <Producto
-                                key= {producto.id}
-                                producto ={producto}
+                                key={producto.id}
+                                producto={producto}
                             />
                         ))
                     )}
