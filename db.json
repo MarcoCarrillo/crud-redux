@@ -1,11 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
-    },
-    {
       "id": 2,
       "nombre": "Jugo de Naranja",
       "precio": "1"
@@ -21,54 +16,9 @@
       "id": 4
     },
     {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
+      "nombre": "Perro",
+      "precio": 1500,
       "id": 5
-    },
-    {
-      "nombre": "Marco",
-      "precio": 1,
-      "id": 6
-    },
-    {
-      "nombre": "Luis",
-      "precio": 88,
-      "id": 7
-    },
-    {
-      "nombre": "Rib eye",
-      "precio": 4,
-      "id": 8
-    },
-    {
-      "nombre": "Huevo",
-      "precio": 5,
-      "id": 9
-    },
-    {
-      "nombre": "Pollo",
-      "precio": 15,
-      "id": 10
-    },
-    {
-      "nombre": "Polloss",
-      "precio": 152,
-      "id": 11
-    },
-    {
-      "nombre": "Queso",
-      "precio": 20,
-      "id": 12
-    },
-    {
-      "nombre": "Kesillo",
-      "precio": 444,
-      "id": 13
-    },
-    {
-      "nombre": "tequila",
-      "precio": 200,
-      "id": 14
     }
   ]
 }

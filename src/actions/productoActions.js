@@ -99,10 +99,20 @@ export function eliminarProductoAction(id){
     return async dispatch => {
         dispatch( obtenerProductoEliminar(id) );
         // console.log(id);
-        
-        try {
-        } catch (error) {
 
+        try {
+            await clienteAxios.delete(`/productos/${id}`);
+            dispatch( eliminarProductoExito() );
+
+            //Si se elimina mostrar alerta
+            Swal.fire(
+                'Eliminado!',
+                'El producto se eliminó correctamente',
+                'success'
+            )
+        } catch (error) {
+            console.log(error);
+            dispatch( eliminarProductoError());
         }
     }
 }
@@ -110,4 +120,13 @@ export function eliminarProductoAction(id){
 const obtenerProductoEliminar = id => ({
     type: OBTENER_PRODUCTO_ELIMINAR,
     payload: id
+});
+
+const eliminarProductoExito = () => ({
+    type: PRODUCTO_ELIMINADO_EXITO
+});
+
+const eliminarProductoError = () => ({
+    type: PRODUCTO_ELIMINADO_ERROR,
+    payload: true
 })
