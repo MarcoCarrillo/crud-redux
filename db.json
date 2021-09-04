@@ -3,7 +3,7 @@
     {
       "id": 2,
       "nombre": "Jugo de Naranja",
-      "precio": "101"
+      "precio": "1010"
     },
     {
       "nombre": "Jugo de Naranja",
@@ -14,11 +14,6 @@
       "nombre": "Jugo de piña",
       "precio": 150,
       "id": 4
-    },
-    {
-      "nombre": "Tacos de sal con pelo",
-      "precio": "1000",
-      "id": 5
     }
   ]
 }
