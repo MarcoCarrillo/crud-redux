@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 //Actions de redux
 import {crearNuevoProductoAction} from '../actions/productoActions';
-import {mostrarAlerta} from '../actions/alertaActions'
+import {mostrarAlerta, ocultarAlertaAction} from '../actions/alertaActions'
 
 const NuevoProducto = ({history}) => {
 
@@ -38,7 +38,7 @@ const NuevoProducto = ({history}) => {
             return;
         }
         //Si no hay errores
-
+        dispatch( ocultarAlertaAction());
         //Crear el nuevo producto
         agregarProducto({
             nombre,
@@ -61,7 +61,7 @@ const NuevoProducto = ({history}) => {
                         >
 
                         {alerta ? <p className={alerta.classes}>{alerta.msg}</p> : null}
-                        
+
                             <div className="form-group">
                                 <label>Nombre del Producto</label>
                                 <input 
